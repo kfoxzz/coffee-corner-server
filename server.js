@@ -1,8 +1,9 @@
+
 const stripe = require('stripe')('sk_test_51JYwVoAOdPwZgIGSgPNdoGpzjOP4Dwd0rEiyXmbVTOfCOnP2LDc30yjao8pwRnLSdussGztOCzQmXv0doXB8QvyJ00axBuQ2KN');
 const express = require('express');
 const app = express();
 app.use(express.static('public'));
-const YOUR_DOMAIN = 'http://localhost:3000';
+const YOUR_DOMAIN = process.env.YOUR_DOMAIN;
 
 const cors = require("cors");
 const corsOptions = {
